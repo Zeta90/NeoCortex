@@ -1,0 +1,9 @@
+
+# Public access
+POST http://neocortex.api/signup HTTP/1.1
+content-type: application/json
+
+
+    email": "test@test.com",
+    "password": "testPass",
+    "publicName": "PName"

@@ -1,0 +1,110 @@
+{
+  "signup": {
+    "controller_path": "__internal",
+    "public": true,
+
+    "get_functions": {
+      "index": {
+        "skip_session_timer": true,
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": null,
+        "required_POST_params": ["publicName", "email", "password"],
+        "permission": 0
+      },
+      "finish": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": null,
+        "required_POST_params": [
+          "userFirstName",
+          "userLastName",
+          "userDOB",
+          "email"
+        ],
+        "permission": 0
+      }
+    }
+  },
+  "login": {
+    "controller_path": "__internal",
+    "public": true,
+
+    "get_functions": {
+      "index": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": null,
+        "required_POST_params": ["email", "password"],
+        "permission": 0
+      }
+    }
+  },
+  "stream": {
+    "controller_path": "__internal",
+    "public": false,
+
+    "get_functions": {
+      "open": {
+        "allowed_HTTP_method": "GET",
+        "required_HTTP_headers": null,
+        "required_POST_params": null,
+        "additional_internal_function": "flag_account_streaming",
+        "permission": 2
+      },
+      "setroom": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": null,
+        "required_POST_params": null,
+        "permission": 2
+      },
+      "getrooms": {
+        "allowed_HTTP_method": "GET",
+        "required_HTTP_headers": null,
+        "required_POST_params": null,
+        "permission": 2
+      }
+    }
+  },
+  "test": {
+    "controller_path": "__internal",
+    "public": false,
+    "WD_trazable":true,
+    "get_functions": {
+      "index": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": null,
+        "required_POST_params": null,
+        "permission": 2
+      },
+      "launch": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": ["HTTP_H1"],
+        "required_POST_params": ["email", "password"],
+        "permission": 2
+      },
+      "_connect": {
+        "WD_function":true,
+        "subdomain": "feed",
+        "allowed_HTTP_method": "PUT",
+        "permission": 2
+      }
+    }
+  },
+  "ftr_test_public": {
+    "controller_path": "__internal",
+    "public": true,
+    
+    "get_functions": {
+      "index": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": ["HTTP_FAKEHEADER"],
+        "required_POST_params": [],
+        "permission": 0
+      },
+      "test": {
+        "allowed_HTTP_method": "POST",
+        "required_HTTP_headers": [],
+        "required_POST_params": ["POST_FAKEPOST"],
+        "permission": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+[1/8/2021 14:59:52][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[1/8/2021 15:0:18][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[1/8/2021 15:0:48][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[1/8/2021 15:1:21][MYSQL][ERROR] -> Error: The user specified as a definer ('root'@'%') does not exist
+[1/8/2021 15:5:12][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[11/8/2021 21:28:44][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[11/8/2021 21:38:24][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[11/8/2021 21:38:47][MYSQL][ERROR] -> Error: connect ETIMEDOUT
+[12/8/2021 2:23:6][MYSQL][ERROR] -> Error: connect ETIMEDOUT

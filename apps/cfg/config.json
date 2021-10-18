@@ -1,0 +1,25 @@
+{
+  "servers": {
+    "mysql": {
+      "host": "neocortex.api",
+      "port": "3306",
+      "userName": "diglesias",
+      "password": "underground"
+    },
+    "mongodb": {
+      "host": "neocortex.api",
+      "port": "27017"
+    },
+    "redis": {
+      "host": "neocortex.api",
+      "port": "6379",
+      "databases": {
+        "feed_session": 0
+      }
+    }
+  },
+
+  "ignition": {
+    "crash_files": ["crashlog.lg", "ignition.lg", "mysql.lg"]
+  }
+}

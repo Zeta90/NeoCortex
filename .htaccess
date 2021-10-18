@@ -1,0 +1,18 @@
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_METHOD} !GET
+RewriteRule ^(.*)/(.*)/$ index.php [L]
+
+#comment out to keep trailing slashes
+RewriteRule ^(.*)/$ $1 [R=301,L]
+RewriteRule ^(.*)/(.*)/$ $1 [R=301,L]
+RewriteRule ^(.*)/(.*)/(.*)/$ $1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^(.*)$ index.php?ncortex=$1&%{QUERY_STRING} [L]
+#RewriteRule ^(.*)$ index.php?ncortex=$1 [L]

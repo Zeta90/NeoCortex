@@ -1,0 +1,28 @@
+{
+  "test_app_name": {
+    "allowed_hosts": ["127.0.0.1", "192.168.0.101"],
+    "allowed_ports": ["80"],
+    "app_alias": "TiM",
+    "security": {
+      "session_required": true,
+      "session_timeOut_mins": 10
+    },
+    "authToken": "eyJhcHBfbmFtZSI6IlRpTSIsImFwcF91c2VyIjoiVGlNX2FwcCIsImFwcF9wYXNzIjoiVGlNX1Bhc3MifQ==",
+    "type": "propietary",
+    "auth_controller": "sAuth",
+    "ID": 1
+  },
+
+  "watchdog": {
+    "allowed_hosts": ["0.0.0.100"],
+    "allowed_ports": ["80"],
+    "app_alias": "WatchDog",
+    "security": {
+      "session_required": false
+    },
+    "authToken": "watchdog-token",
+    "type": "internal",
+    "auth_controller": "sAuth",
+    "ID": 0
+  }
+}
